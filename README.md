@@ -1,17 +1,16 @@
 # Image Background Removal Service
 
-MODNet: Moving Object Detection Network with Motion and Appearance for Autonomous Driving
-MODNet is a light-weight matting objective decomposition network (MODNet), which can process portrait matting from a single input image in realtime.
-MODNet is much faster than contemporaneous matting methods and runs at 63 frames per second.
-MODNet achieves remarkable results in daily photos and videos.
-MODNet is easy to be trained in an end-to-end style.
+This service is based on the pre-trained [MODNet](https://github.com/ZHKKKe/MODNet) model.
+
+The folder `model/pretrained` contains the official pre-trained models of MODNet. You can download them from this [link](https://drive.google.com/drive/folders/1umYmlCulvIFNaqPjwod1SayFmSRHziyR?usp=sharing).
 
 ## Setup
 
-    conda create --name ibrs
+    conda create --name ibrs python=3.9
     conda activate ibrs
     conda install --yes --file requirements.txt
 
+## Test
 
-
+    python -c "import inference; inference.remove_background('images/lea.jpg')"
 
