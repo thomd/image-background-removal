@@ -14,3 +14,18 @@ The folder `model/pretrained` contains the official pre-trained models of MODNet
 
     python -c "import inference; inference.remove_background('images/lea.jpg')"
 
+## Service Endpoints
+
+Depending on the `Accept` request header, the service returns an PNG image or an DataURI:
+
+    curl -F "file=@image.jpg" -H 'Accept: image/png' 'http://localhost:8000/file'
+    curl -F "file=@image.jpg" -H 'Accept: application/json' 'http://localhost:8000/file'
+
+The service does **not** persist images, but does allow to request the ...
+
+
+## TODO
+
+[ ] rate limiter
+[ ] demo webpage
+[ ] error handling
