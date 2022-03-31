@@ -26,6 +26,6 @@ The service does **not** persist images, but does allow to request the ...
 
 ## TODO
 
-[ ] rate limiter
-[ ] demo webpage
-[ ] error handling
+- [ ] rate limiter
+- [ ] demo webpage
+- [ ] error handling
